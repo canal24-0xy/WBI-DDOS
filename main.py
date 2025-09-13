@@ -54,8 +54,8 @@ def display_header():
         f"{Fore.GREEN}  ██{Fore.YELLOW}  ╚═{Fore.GREEN}█████{Fore.YELLOW}═╝ ██  ║{Fore.GREEN}    ██{Fore.YELLOW} ║{Fore.GREEN}             ██{Fore.YELLOW} ║{Fore.GREEN}   ██{Fore.YELLOW}  ║",
         f"{Fore.GREEN}     ███{Fore.YELLOW}   ║{Fore.GREEN}  ███  ║{Fore.GREEN}     ████████████████{Fore.YELLOW}  ║{Fore.GREEN}   ██{Fore.YELLOW} ║",
         f"{Fore.YELLOW}      ╚═══╝   ╚═══╝           ╚══════════════╝    ╚═══╝",
-        f"{Fore.YELLOW} 
-        f"{Fore.YELLOW}
+        f"{Fore.YELLOW} ",
+        f"{Fore.YELLOW}",
         f"{Fore.YELLOW}═══════════════════════════════════════════════════════════════════════════",
     ]
     for line in header_lines:
