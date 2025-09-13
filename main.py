@@ -43,7 +43,9 @@ def log_attack_status(message, level='info', print_to_terminal=True):
 
 def display_header():
     header_lines = [
-        f"{Fore.GREEN}══════════════════════════════════════════════════════════════════════",
+        f"{Fore.BLACK}══════════════════════════════════════════════════════════════════════",
+        f"{Fore.RED}",
+        f"{Fore.RED}",
         f"{Fore.RED}      ██{Fore.YELLOW}═╗{Fore.RED}              ██{Fore.YELLOW}═╗{Fore.RED}   ████████████████{Fore.YELLOW}══╗{Fore.RED}     ██{Fore.YELLOW}══╗  ",
         f"{Fore.RED}      ██{Fore.YELLOW}  ║{Fore.RED}             ██{Fore.YELLOW}  ║{Fore.RED}  ██{Fore.YELLOW}  ║{Fore.CYAN}           ██{Fore.YELLOW}  ║{Fore.RED}   ██{Fore.YELLOW}  ║",
         f"{Fore.RED}      ██{Fore.YELLOW}  ║{Fore.RED}             ██{Fore.YELLOW}  ║{Fore.RED}  ██{Fore.YELLOW}  ║{Fore.CYAN}           ██{Fore.YELLOW}  ║{Fore.RED}   ██{Fore.YELLOW}  ║",
@@ -61,7 +63,7 @@ def display_header():
         print(line)
     # Versi dan URL
     print(f"{Fore.WHITE}{Style.BRIGHT}{' ' * 57}v.1.0")
-    print(f"{Fore.CYAN}{Style.BRIGHT}{' ' * 16}---------https://Canal24-0ky.com-------")
+    print(f"{Fore.CYAN}{Style.BRIGHT}{' ' * 16}------https://Canal24-0ky.com-------")
     print(f"{Fore.CYAN}|{'=' * 74}|")
 
 
