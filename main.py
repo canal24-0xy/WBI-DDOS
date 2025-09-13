@@ -75,8 +75,8 @@ def countdown(t):
             stdout.flush()
             stdout.write(f"\r{Fore.BLUE}| [*]{Fore.RED} {remaining_time:.2f} {Fore.BLUE} Sec left{' ' * 26}|")
             print(f"\r{Fore.YELLOW} W A R T O K {Fore.CYAN}==⟩ WAR ==⟩ {url} 💥")
-            print(f"\r{Fore.GREEN}B E K I S {Fore.WHITE}==⟩ WAR ==⟩ {url} 💥")
-            print(f"\r{Fore.CYAN}B E K I S {Fore.YELLOW}==⟩ WAR ==⟩ {url} 💥")
+            print(f"\r{Fore.GREEN} B E K I S {Fore.WHITE}==⟩ WAR ==⟩ {url} 💥")
+            print(f"\r{Fore.CYAN} I N A R A {Fore.YELLOW}==⟩ WAR ==⟩ {url} 💥")
         else:
             stdout.flush()
             stdout.write(f"\r{Fore.RED}|▒[÷]▒  {Fore.YELLOW}B A S E  {Fore.CYAN} Attack has been completed|\n")
@@ -176,8 +176,8 @@ async def run_stress_test(url: str, duration: int, concurrency: int,
                 stdout.flush()
                 # Tambahkan gaya progress seperti countdown asli
                 print(f"\r{Fore.YELLOW} W A R T O K {Fore.CYAN}==⟩ WAR ==⟩ {url} 💥")
-                print(f"\r{Fore.GREEN}B E K I S {Fore.WHITE}==⟩ WAR ==⟩ {url} 💥")
-                print(f"\r{Fore.CYAN}B E K I S {Fore.YELLOW}==⟩ WAR ==⟩ {url} 💥")
+                print(f"\r{Fore.GREEN} B E K I S {Fore.WHITE}==⟩ WAR ==⟩ {url} 💥")
+                print(f"\r{Fore.CYAN} I N A R A {Fore.YELLOW}==⟩ WAR ==⟩ {url} 💥")
             else:
                 await asyncio.sleep(0.5)
 
