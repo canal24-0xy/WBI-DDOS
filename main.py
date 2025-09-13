@@ -58,11 +58,11 @@ def display_header():
         f"{Fore.YELLOW}            ╚═══╝   ╚═══╝          ╚════════════╝      ╚═══╝",
         f"{Fore.YELLOW}             🇵🇸 WARTOK.            {Fore.YELLOW}🇵🇸 BEKIS          {Fore.WHITE} 🇵🇸 INARA",
         f"{Fore.YELLOW}",
-        f"{Fore.YELLOW}╔══╗           ╔════╗   ╔══╗    ╔══╗  ╔═══════╗",
-        f"{Fore.YELLOW}║  ║          ║  ║ ║  ║  ║  ║    ║  ║  ║  ╔═════╝",
-        f"{Fore.YELLOW}║  ║         ║  ║   ║  ║  ║  ╚══╝  ║   ║  ╚════╗",
-        f"{Fore.YELLOW}║  ║         ║  ╚═══╝  ║   ╚═   ═╝     ║  ╔════╝",
-        f"{Fore.YELLOW}║  ╚══════  ║  ╔═══╗  ║     ║  ║      ║  ╚════╗",
+        f"{Fore.YELLOW}╔══╗          ╔════╗   ╔══╗    ╔══╗  ╔═══════╗",
+        f"{Fore.YELLOW}║  ║         ║  ║ ║  ║  ║  ║    ║  ║  ║  ╔═════╝",
+        f"{Fore.YELLOW}║  ║        ║  ║   ║  ║  ║  ╚══╝  ║   ║  ╚════╗",
+        f"{Fore.YELLOW}║  ║        ║  ╚═══╝  ║   ╚═   ═╝     ║  ╔════╝",
+        f"{Fore.YELLOW}║  ╚══════ ║  ╔═══╗  ║     ║  ║      ║  ╚════╗",
         f"{Fore.YELLOW}╚════════╝  ╚══╝   ╚══╝     ╚═╝       ╚══════╝",
         f"{Fore.BLACK}═══════════════════════════════════════════════════════════════════════",]
     for line in header_lines:
