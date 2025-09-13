@@ -74,9 +74,9 @@ def countdown(t):
         if remaining_time > 1:
             stdout.flush()
             stdout.write(f"\r{Fore.BLUE}| [*]{Fore.RED} {remaining_time:.2f} {Fore.BLUE} Sec left{' ' * 26}|")
-            print(f"\r{Fore.YELLOW} W A R T O K {Fore.CYAN}==⟩ WAR")
-            print(f"\r{Fore.GREEN}B E K I S {Fore.WHITE}==⟩ WAR ")
-            print(f"\r{Fore.CYAN}B E K I S {Fore.YELLOW}==⟩ WAR ")
+            print(f"\r{Fore.YELLOW} W A R T O K {Fore.CYAN}==⟩ WAR ==⟩ {url} 💥")
+            print(f"\r{Fore.GREEN}B E K I S {Fore.WHITE}==⟩ WAR ==⟩ {url} 💥")
+            print(f"\r{Fore.CYAN}B E K I S {Fore.YELLOW}==⟩ WAR ==⟩ {url} 💥")
         else:
             stdout.flush()
             stdout.write(f"\r{Fore.RED}|▒[÷]▒  {Fore.YELLOW}B A S E  {Fore.CYAN} Attack has been completed|\n")
@@ -234,13 +234,13 @@ def print_summary(url: str, duration: int, concurrency: int, method: str, rate_l
         print(f"{Fore.CYAN}|{'-' * 74}|")
         for name, cnt in summary['exceptions'].most_common():
             print(f"{Fore.RED}| {name:<10}: {str(cnt):<58}|")
-    print(f"{Fore.CYAN}|{'=' * 74}|")
+    print(f"{Fore.CYAN}|{'=' * 58}|")
 
 
 def confirm_ethical_use(target_host: str) -> bool:
     print(f"{Fore.YELLOW}| PERINGATAN: Gunakan hanya pada server milik sendiri dengan izin. |")
     print(f"{Fore.YELLOW}| Target: {target_host.ljust(61)}|")
-    print(f"{Fore.YELLOW}| Ketik 'YA' untuk melanjutkan: {' ' * 35}|")
+    print(f"{Fore.YELLOW}| Ketik 'Y' untuk melanjutkan: {' ' * 35}|")
     ans = input("    > ").strip().upper()
     return ans == 'YA'
 
@@ -277,7 +277,7 @@ if __name__ == "__main__":
     target_url = get_user_input("URL TARGET:   ")
     while not validators.url(target_url):
         print(f"{Fore.RED}|    [ERROR] Invalid URL, try again.{' ' * 37}|")
-        print(f"{Fore.CYAN}|{'=' * 74}|")
+        print(f"{Fore.CYAN}|{'=' * 58}|")
         target_url = get_user_input("URL TARGET:")
 
     try:
