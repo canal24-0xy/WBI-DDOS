@@ -64,7 +64,7 @@ def display_header():
     # Versi dan URL
     print(f"{Fore.WHITE}{Style.BRIGHT}{' ' * 57}LAYER7_v.2.0")
     print(f"{Fore.CYAN}{Style.BRIGHT}{' ' * 16}{Fore.YELLOW}------https://Canal24-0ky.com-------")
-    print(f"{Fore.YELLOW}|{'═' * 65}|")
+    print(f"{Fore.YELLOW}{'═' * 69}")
 
 
 def countdown(t):
@@ -80,13 +80,13 @@ def countdown(t):
         else:
             stdout.flush()
             stdout.write(f"\r{Fore.RED}|▒[÷]▒  {Fore.YELLOW}B A S E  {Fore.CYAN} Attack has been completed|\n")
-            print(f"{Fore.YELLOW}|{'═' * 65}|")
+            print(f"{Fore.YELLOW}{'═' * 69}")
             return
 
 
 def get_user_input(prompt_message):
     print(f"{Fore.GREEN}|{' ' * 4}[?] {prompt_message.ljust(63)}|")
-    print(f"{Fore.YELLOW}|{'═' * 65}|")
+    print(f"{Fore.YELLOW}{'═' * 69}")
     return input(f"{Fore.YELLOW}{' ' * 4}> ").strip()
 
 
@@ -242,7 +242,7 @@ def confirm_ethical_use(target_host: str) -> bool:
     print(f"{Fore.YELLOW}| Target: {target_host.ljust(61)}|")
     print(f"{Fore.YELLOW}| Ketik 'Y' untuk melanjutkan: {' ' * 35}|")
     ans = input("    > ").strip().upper()
-    return ans == 'YA'
+    return ans == 'Y'
 
 
 def launch_attack(target_url, duration, concurrency=10, method='GET', rate_limit=None):
