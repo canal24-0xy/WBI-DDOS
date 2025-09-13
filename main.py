@@ -59,7 +59,7 @@ def display_header():
         f"{Fore.YELLOW}             🇵🇸 WARTOK.            {Fore.YELLOW}🇵🇸 BEKIS          {Fore.WHITE} 🇵🇸 INARA",
         f"{Fore.YELLOW}",
         f"{Fore.GREEN}╔══╗          ╔═════╗   ╔══╗    ╔══╗  ╔════════╗  ╔════════╗   ╔═════════╗",
-        f"{Fore.YGREEN}║  ║         ║  ╔═╗  ║  ║  ║    ║  ║  ║  ╔═════╝    ║  ╔═══╗  ║  ╚══════╗  ║",
+        f"{Fore.GREEN}║  ║         ║  ╔═╗  ║  ║  ║    ║  ║  ║  ╔═════╝    ║  ╔═══╗  ║  ╚══════╗  ║",
         f"{Fore.GREEN}║  ║        ║  ║   ║  ║  ║  ╚══╝  ║   ║  ╚════╗     ║  ║    ║  ║        ║  ║",
         f"{Fore.GREEN}║  ║        ║  ╚═══╝  ║   ╚═   ═╝     ║  ╔════╝     ║  ╚═══╝  ╝       ║  ║",
         f"{Fore.GREEN}║  ╚══════  ║  ╔═══╗  ║     ║  ║      ║  ╚════╗    ║  ╔══╗   ╗      ║  ║",
