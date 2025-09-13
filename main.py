@@ -43,20 +43,20 @@ def log_attack_status(message, level='info', print_to_terminal=True):
 
 def display_header():
     header_lines = [
-        f"{Fore.GREEN}══════════════════════════════════════════════════════════════════════════",
-        f"{Fore.RED}   ██{Fore.YELLOW}═╗{Fore.RED}              ██{Fore.YELLOW}═╗{Fore.RED}   ████████████████{Fore.YELLOW}══╗{Fore.RED}     ██{Fore.YELLOW}══╗  ",
-        f"{Fore.RED}   ██{Fore.YELLOW}  ║{Fore.RED}             ██{Fore.YELLOW}  ║{Fore.RED}  ██{Fore.YELLOW}  ║{Fore.CYAN}         ██{Fore.YELLOW}  ║{Fore.RED}   ██{Fore.YELLOW}  ║",
-        f"{Fore.RED}   ██{Fore.YELLOW}  ║{Fore.RED}             ██{Fore.YELLOW}  ║{Fore.RED}  ██{Fore.YELLOW} ║{Fore.CYAN}           ██{Fore.YELLOW}  ║{Fore.RED}   ██{Fore.YELLOW}  ║",
-        f"{Fore.CYAN}   ██{Fore.YELLOW}  ║{Fore.CYAN}     ██{Fore.YELLOW}═╗{Fore.CYAN}    ██{Fore.YELLOW}  ║{Fore.CYAN}  ██{Fore.YELLOW}  ║{Fore.CYAN}           ██{Fore.YELLOW}  ║{Fore.CYAN}   ██{Fore.YELLOW}  ║",
-        f"{Fore.CYAN}   ██{Fore.YELLOW}  ║{Fore.CYAN}     ██{Fore.YELLOW}  ║{Fore.CYAN}   ██{Fore.YELLOW}  ║{Fore.CYAN}  ████████████████   ╝    ██{Fore.YELLOW}  ║",
-        f"{Fore.CYAN}   ██{Fore.YELLOW}  ║{Fore.CYAN}     ██{Fore.YELLOW}  ║{Fore.CYAN}   ██{Fore.YELLOW}  ║{Fore.CYAN}  ██{Fore.YELLOW}  ║{Fore.GREEN}           ██{Fore.YELLOW}  ╗{Fore.GREEN}   ██{Fore.YELLOW}  ║",
-        f"{Fore.GREEN}    ██{Fore.YELLOW}  ║{Fore.GREEN}    ██{Fore.YELLOW}  ║{Fore.GREEN}  ██{Fore.YELLOW}  ║{Fore.GREEN}   ██{Fore.YELLOW}  ║{Fore.GREEN}           ██{Fore.YELLOW}  ║{Fore.GREEN}   ██{Fore.YELLOW}  ║",
-        f"{Fore.GREEN}     ██{Fore.YELLOW}  ╚═{Fore.GREEN}█████{Fore.YELLOW}═╝{Fore.GREEN} ██  ║{Fore.GREEN}    ██{Fore.YELLOW}  ║{Fore.GREEN}           ██{Fore.YELLOW}  ║{Fore.GREEN}   ██{Fore.YELLOW}  ║",
-        f"{Fore.GREEN}        ███{Fore.YELLOW}   ║{Fore.GREEN} ███  ║{Fore.GREEN}      ████████████████{Fore.YELLOW}   ║{Fore.GREEN}    ██{Fore.YELLOW}  ║",
-        f"{Fore.YELLOW}         ╚═══╝   ╚═══╝          ╚════════════╝      ╚═══╝",
+        f"{Fore.GREEN}══════════════════════════════════════════════════════════════════════",
+        f"{Fore.RED}      ██{Fore.YELLOW}═╗{Fore.RED}              ██{Fore.YELLOW}═╗{Fore.RED}   ████████████████{Fore.YELLOW}══╗{Fore.RED}     ██{Fore.YELLOW}══╗  ",
+        f"{Fore.RED}      ██{Fore.YELLOW}  ║{Fore.RED}             ██{Fore.YELLOW}  ║{Fore.RED}  ██{Fore.YELLOW}  ║{Fore.CYAN}         ██{Fore.YELLOW}  ║{Fore.RED}   ██{Fore.YELLOW}  ║",
+        f"{Fore.RED}      ██{Fore.YELLOW}  ║{Fore.RED}             ██{Fore.YELLOW}  ║{Fore.RED}  ██{Fore.YELLOW} ║{Fore.CYAN}           ██{Fore.YELLOW}  ║{Fore.RED}   ██{Fore.YELLOW}  ║",
+        f"{Fore.CYAN}      ██{Fore.YELLOW}  ║{Fore.CYAN}     ██{Fore.YELLOW}═╗{Fore.CYAN}    ██{Fore.YELLOW}  ║{Fore.CYAN}  ██{Fore.YELLOW}  ║{Fore.CYAN}           ██{Fore.YELLOW}  ║{Fore.CYAN}   ██{Fore.YELLOW}  ║",
+        f"{Fore.CYAN}      ██{Fore.YELLOW}  ║{Fore.CYAN}     ██{Fore.YELLOW}  ║{Fore.CYAN}   ██{Fore.YELLOW}  ║{Fore.CYAN}  ████████████████   ╝    ██{Fore.YELLOW}  ║",
+        f"{Fore.CYAN}      ██{Fore.YELLOW}  ║{Fore.CYAN}     ██{Fore.YELLOW}  ║{Fore.CYAN}   ██{Fore.YELLOW}  ║{Fore.CYAN}  ██{Fore.YELLOW}  ║{Fore.GREEN}           ██{Fore.YELLOW}  ╗{Fore.GREEN}   ██{Fore.YELLOW}  ║",
+        f"{Fore.GREEN}       ██{Fore.YELLOW}  ║{Fore.GREEN}    ██{Fore.YELLOW}  ║{Fore.GREEN}  ██{Fore.YELLOW}  ║{Fore.GREEN}   ██{Fore.YELLOW}  ║{Fore.GREEN}           ██{Fore.YELLOW}  ║{Fore.GREEN}   ██{Fore.YELLOW}  ║",
+        f"{Fore.GREEN}        ██{Fore.YELLOW}  ╚═{Fore.GREEN}█████{Fore.YELLOW}═╝{Fore.GREEN} ██  ║{Fore.GREEN}    ██{Fore.YELLOW}  ║{Fore.GREEN}           ██{Fore.YELLOW}  ║{Fore.GREEN}   ██{Fore.YELLOW}  ║",
+        f"{Fore.GREEN}           ███{Fore.YELLOW}   ║{Fore.GREEN} ███  ║{Fore.GREEN}      ████████████████{Fore.YELLOW}   ║{Fore.GREEN}    ██{Fore.YELLOW}  ║",
+        f"{Fore.YELLOW}            ╚═══╝   ╚═══╝          ╚════════════╝      ╚═══╝",
         f"{Fore.YELLOW} ",
         f"{Fore.YELLOW}",
-        f"{Fore.YELLOW}═══════════════════════════════════════════════════════════════════════════",
+        f"{Fore.YELLOW}═══════════════════════════════════════════════════════════════════════",
     ]
     for line in header_lines:
         print(line)
