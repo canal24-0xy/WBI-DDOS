@@ -45,21 +45,21 @@ def display_header():
     header_lines = [
         f"{Fore.GREEN}══════════════════════════════════════════════════════════════════════════",
         f"{Fore.YELLOW}
+        f"{Fore.YELLOW}█▀▀█         █▀▀█
+        f"{Fore.YELLOW}█  █         █  █
+        f"{Fore.YELLOW}█  █  █▀▀█  █  █
+        f"{Fore.YELLOW}█  █  █  █  █  █
+        f"{Fore.YELLOW}█  █  █  █  █  █
+        f"{Fore.YELLOW}█  █  █  █  █  █
+        f"{Fore.YELLOW}█  █  █  █  █  █
+        f"{Fore.YELLOW}█  ▀▀▀▀  ▀▀▀▀  █
+        f"{Fore.YELLOW}▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
         f"{Fore.YELLOW}
         f"{Fore.YELLOW}
         f"{Fore.YELLOW}
         f"{Fore.YELLOW}
         f"{Fore.YELLOW}
-        f"{Fore.YELLOW}
-        f"{Fore.YELLOW}
-        f"{Fore.YELLOW}
-        f"{Fore.YELLOW}
-        f"{Fore.YELLOW}
-        f"{Fore.YELLOW}
-        f"{Fore.YELLOW}
-        f"{Fore.YELLOW}
-        f"{Fore.YELLOW}
-        f"{Fore.YELLOW}════════════════════════════════════════════════════════════════════════════",
+        f"{Fore.YELLOW}═══════════════════════════════════════════════════════════════════════════",
     ]
     for line in header_lines:
         print(line)
