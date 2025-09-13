@@ -218,7 +218,7 @@ def print_summary(url: str, duration: int, concurrency: int, method: str, rate_l
     p99 = sorted(latencies)[int(0.99 * len(latencies)) - 1] if latencies else 0.0
     rps = summary['total'] / duration if duration > 0 else 0
     # Gaya log penyelesaian seperti file asli
-    stdout.write(f"\r{Fore.RED}|▒[÷]▒ {Fore.YELLOW}BLACK-ARMY {Fore.CYAN} Attack has been completed|\n")
+    stdout.write(f"\r{Fore.RED}|▒[÷]▒ {Fore.YELLOW}W B I {Fore.CYAN} Attack has been completed|\n")
     print(f"{Fore.CYAN}|{'=' * 74}|")
     log_attack_status("Test selesai. Ringkasan:")
     print(f"{Fore.CYAN}|{'=' * 74}|")
