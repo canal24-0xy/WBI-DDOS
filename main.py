@@ -56,9 +56,14 @@ def display_header():
         f"{Fore.GREEN}        ██{Fore.YELLOW}  ╚═{Fore.GREEN}█████{Fore.YELLOW}═╝{Fore.GREEN} ██  ║{Fore.GREEN}    ██{Fore.YELLOW}  ║{Fore.GREEN}           ██{Fore.YELLOW}  ║{Fore.GREEN}   ██{Fore.YELLOW}  ║",
         f"{Fore.GREEN}           ███{Fore.YELLOW}   ║{Fore.GREEN} ███  ║{Fore.GREEN}      ████████████████{Fore.YELLOW}   ║{Fore.GREEN}    ██{Fore.YELLOW}  ║",
         f"{Fore.YELLOW}            ╚═══╝   ╚═══╝          ╚════════════╝      ╚═══╝",
-        f"{Fore.YELLOW}             🇵🇸 WARTOK.            {Fore.YELLOW}🇵🇸 BEKIS        {Fore.WHITE} 🇵🇸 INARA",
+        f"{Fore.YELLOW}             🇵🇸 WARTOK.            {Fore.YELLOW}🇵🇸 BEKIS          {Fore.WHITE} 🇵🇸 INARA",
         f"{Fore.YELLOW}",
-        f"{Fore.YELLOW}",
+        f"{Fore.YELLOW}═╗
+        f"{Fore.YELLOW} ║
+        f"{Fore.YELLOW} ║
+        f"{Fore.YELLOW} ║
+        f"{Fore.YELLOW} ║
+        f"{Fore.YELLOW} ╚═══
         f"{Fore.BLACK}═══════════════════════════════════════════════════════════════════════",]
     for line in header_lines:
         print(line)
@@ -86,7 +91,7 @@ def countdown(t):
 
 
 def get_user_input(prompt_message):
-    print(f"{Fore.GREEN}|{' ' * 4}[?] {prompt_message.ljust(63)}|")
+    print(f"{Fore.GREEN}{' ' * 4}[?] {prompt_message.ljust(63)}|")
     print(f"{Fore.YELLOW}{'═' * 69}")
     return input(f"{Fore.YELLOW}{' ' * 4}> ").strip()
 
