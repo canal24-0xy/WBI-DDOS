@@ -51,7 +51,7 @@ def display_header():
         f"{Fore.CYAN}   ██{Fore.YELLOW}  ║{Fore.CYAN}     ██{Fore.YELLOW}  ║{Fore.CYAN}   ██{Fore.YELLOW}  ║{Fore.CYAN}  ████████████████   ╝    ██{Fore.YELLOW} ║",
         f"{Fore.CYAN}   ██{Fore.YELLOW}  ║{Fore.CYAN}     ██{Fore.YELLOW}  ║{Fore.CYAN}   ██{Fore.YELLOW}  ║{Fore.CYAN}  ██{Fore.YELLOW}  ║{Fore.GREEN}           ██{Fore.YELLOW}  ╗{Fore.GREEN}   ██{Fore.YELLOW}  ║",
         f"{Fore.GREEN}    ██{Fore.YELLOW}  ║{Fore.GREEN}    ██{Fore.YELLOW}  ║{Fore.GREEN}  ██{Fore.YELLOW}  ║{Fore.GREEN}   ██{Fore.YELLOW}  ║{Fore.GREEN}           ██{Fore.YELLOW}  ║{Fore.GREEN}   ██{Fore.YELLOW}  ║",
-        f"{Fore.GREEN}     ██{Fore.YELLOW}  ╚═{Fore.GREEN}█████{Fore.YELLOW}═╝{Fore.GREEN} ██  ║{Fore.GREEN}    ██{Fore.YELLOW}  ║{Fore.GREEN}           ██{Fore.YELLOW}  ║{Fore.GREEN}   ██{Fore.YELLOW}  ║",
+        f"{Fore.GREEN}     ██{Fore.YELLOW}  ╚═{Fore.GREEN}█████{Fore.YELLOW}═╝{Fore.GREEN} ██  ║{Fore.GREEN}    ██{Fore.YELLOW}  ║{Fore.GREEN}           ██{Fore.YELLOW}  ║{Fore.GREEN}  ██{Fore.YELLOW}  ║",
         f"{Fore.GREEN}        ███{Fore.YELLOW}   ║{Fore.GREEN} ███  ║{Fore.GREEN}      ████████████████{Fore.YELLOW}   ║{Fore.GREEN}     ██{Fore.YELLOW} ║",
         f"{Fore.YELLOW}         ╚═══╝   ╚═══╝          ╚════════════╝    ╚═══╝",
         f"{Fore.YELLOW} ",
