@@ -64,7 +64,7 @@ def display_header():
     # Versi dan URL
     print(f"{Fore.WHITE}{Style.BRIGHT}{' ' * 57}LAYER7_v.2.0")
     print(f"{Fore.CYAN}{Style.BRIGHT}{' ' * 16}{Fore.YELLOW}------https://Canal24-0ky.com-------")
-    print(f"{Fore.CYAN}|{'=' * 74}|")
+    print(f"{Fore.MAGENTA}|{'=' * 69}|")
 
 
 def countdown(t):
@@ -79,7 +79,7 @@ def countdown(t):
         else:
             stdout.flush()
             stdout.write(f"\r{Fore.RED}|▒[÷]▒ {Fore.YELLOW}BLACK-ARMY {Fore.CYAN} Attack has been completed|\n")
-            print(f"{Fore.CYAN}|{'=' * 74}|")
+            print(f"{Fore.MAGENTA}|{'=' * 69}|")
             return
 
 
