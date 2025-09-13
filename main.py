@@ -62,7 +62,7 @@ def display_header():
     for line in header_lines:
         print(line)
     # Versi dan URL
-    print(f"{Fore.WHITE}{Style.BRIGHT}{' ' * 57}v.1.0")
+    print(f"{Fore.WHITE}{Style.BRIGHT}{' ' * 57}LAYER7_v.1.0")
     print(f"{Fore.CYAN}{Style.BRIGHT}{' ' * 16}------https://Canal24-0ky.com-------")
     print(f"{Fore.CYAN}|{'=' * 74}|")
 
