@@ -178,7 +178,7 @@ async def run_stress_test(url: str, duration: int, concurrency: int,
                 print(f"\r{Fore.YELLOW} W A R T O K {Fore.CYAN}==⟩ WAR")
                 print(f"\r{Fore.GREEN}B E K I S {Fore.WHITE}==⟩ WAR ")
                 print(f"\r{Fore.CYAN}B E K I S {Fore.YELLOW}==⟩ WAR ")
-        else:
+            else:
                 await asyncio.sleep(0.5)
 
         prog_task = asyncio.create_task(progress())
