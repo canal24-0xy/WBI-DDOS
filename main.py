@@ -64,7 +64,7 @@ def display_header():
     # Versi dan URL
     print(f"{Fore.WHITE}{Style.BRIGHT}{' ' * 57}LAYER7_v.2.0")
     print(f"{Fore.CYAN}{Style.BRIGHT}{' ' * 16}{Fore.YELLOW}------https://Canal24-0ky.com-------")
-    print(f"{Fore.YELLOW}|{'=' * 69}|")
+    print(f"{Fore.YELLOW}|{'═' * 65}|")
 
 
 def countdown(t):
@@ -74,18 +74,18 @@ def countdown(t):
         if remaining_time > 1:
             stdout.flush()
             stdout.write(f"\r{Fore.BLUE}| [*]{Fore.RED} {remaining_time:.2f} {Fore.BLUE} Sec left{' ' * 26}|")
-            print(f"\r{Fore.RED} ▒▒ ▒▒ ▒▒ ▒▒ ▒▒ ▒▒ {Fore.CYAN}▒▒ ▒▒ ▒▒ ▒▒ ▒▒")
-            print(f"\r{Fore.GREEN}▒BLACK▒ARMY▒{Fore.WHITE}▒INJECT▒ATTACK▒ ▒ ")
+            print(f"\r{Fore.YELLOW} W A R T O K {Fore.CYAN}WAR")
+            print(f"\r{Fore.GREEN}B E K I S {Fore.WHITE}==⟩WAR ")
         else:
             stdout.flush()
-            stdout.write(f"\r{Fore.RED}|▒[÷]▒ {Fore.YELLOW}BLACK-ARMY {Fore.CYAN} Attack has been completed|\n")
-            print(f"{Fore.YELLOW}|{'=' * 69}|")
+            stdout.write(f"\r{Fore.RED}|▒[÷]▒  {Fore.YELLOW}B A S E  {Fore.CYAN} Attack has been completed|\n")
+            print(f"{Fore.YELLOW}|{'═' * 65}|")
             return
 
 
 def get_user_input(prompt_message):
     print(f"{Fore.GREEN}|{' ' * 4}[?] {prompt_message.ljust(63)}|")
-    print(f"{Fore.YELLOW}|{'=' * 69}|")
+    print(f"{Fore.YELLOW}|{'═' * 65}|")
     return input(f"{Fore.YELLOW}{' ' * 4}> ").strip()
 
 
@@ -302,3 +302,4 @@ if __name__ == "__main__":
             rate_limit = None
 
     launch_attack(target_url, attack_duration, concurrency=concurrency, method=method, rate_limit=rate_limit)
+
