@@ -269,6 +269,88 @@ def launch_attack(target_url, duration, concurrency=10, method='GET', rate_limit
                 concurrency=concurrency,
                 method=method,
                 rate_limit=rate_limit,
+prog_task = asyncio.create_task(progress())
+        try:
+            results = await asyncio.gather(*tasks)
+        finally:
+            prog_task.cancel()
+            # Suppress cancellation noise from the progress task on shutdown
+            with contextlib.suppress(asyncio.CancelledError):
+                await prog_task
+
+    # aggregate
+    agg = {
+        'total': sum(r['total'] for r in results),
+        'ok': sum(r['ok'] for r in results),
+        'by_status': Counter(),
+        'exceptions': Counter(),
+        'latencies': [],
+    }
+    for r in results:
+        agg['by_status'].update(r['by_status'])
+        agg['exceptions'].update(r['exceptions'])
+        agg['latencies'].extend(r['latencies'])
+    return agg
+
+
+def print_summary(url: str, duration: int, concurrency: int, method: str, rate_limit: float | None, summary: dict):
+    latencies = summary['latencies']
+    avg = mean(latencies) if latencies else 0.0
+    p95 = sorted(latencies)[int(0.95 * len(latencies)) - 1] if latencies else 0.0
+    p99 = sorted(latencies)[int(0.99 * len(latencies)) - 1] if latencies else 0.0
+    rps = summary['total'] / duration if duration > 0 else 0
+    # Gaya log penyelesaian seperti file asli
+    stdout.write(f"\r{Fore.RED}|▒[÷]▒ {Fore.YELLOW}BLACK-ARMY {Fore.CYAN} Attack has been completed|\n")
+    print(f"{Fore.CYAN}|{'=' * 74}|")
+    log_attack_status("Test selesai. Ringkasan:")
+    print(f"{Fore.CYAN}|{'=' * 74}|")
+    print(f"{Fore.GREEN}| Target     : {url.ljust(58)}|")
+    print(f"{Fore.GREEN}| Duration   : {str(duration)+'s':<58}|")
+    print(f"{Fore.GREEN}| Concurrency: {str(concurrency):<58}|")
+    print(f"{Fore.GREEN}| Method     : {method:<58}|")
+    print(f"{Fore.GREEN}| Rate limit : {('None' if not rate_limit else str(rate_limit)+' req/s'):<58}|")
+    print(f"{Fore.CYAN}|{'-' * 74}|")
+    print(f"{Fore.WHITE}| Requests   : {str(summary['total']):<58}|")
+    print(f"{Fore.WHITE}| 2xx/3xx    : {str(summary['ok']):<58}|")
+    print(f"{Fore.WHITE}| RPS (avg)  : {rps:<58.2f}|")
+    print(f"{Fore.WHITE}| Latency ms : avg={avg:.2f} p95={p95:.2f} p99={p99:.2f}{' ' * 20}|")
+    if summary['by_status']:
+        print(f"{Fore.CYAN}|{'-' * 74}|")
+        for code, cnt in summary['by_status'].most_common():
+            print(f"{Fore.YELLOW}| HTTP {code:<4}: {str(cnt):<58}|")
+    if summary['exceptions']:
+        print(f"{Fore.CYAN}|{'-' * 74}|")
+        for name, cnt in summary['exceptions'].most_common():
+            print(f"{Fore.RED}| {name:<10}: {str(cnt):<58}|")
+    print(f"{Fore.CYAN}|{'=' * 74}|")
+
+
+def confirm_ethical_use(target_host: str) -> bool:
+    print(f"{Fore.YELLOW}| PERINGATAN: Gunakan hanya pada server milik sendiri dengan izin. |")
+    print(f"{Fore.YELLOW}| Target: {target_host.ljust(61)}|")
+    print(f"{Fore.YELLOW}| Ketik 'YA' untuk melanjutkan: {' ' * 35}|")
+    ans = input("    > ").strip().upper()
+    return ans == 'YA'
+
+
+def launch_attack(target_url, duration, concurrency=10, method='GET', rate_limit=None):
+    target = get_target(target_url)
+    if not confirm_ethical_use(target['host']):
+        log_attack_status("Dibatalkan oleh pengguna demi keamanan.", level='warning')
+        return
+
+    url = f"{target['scheme']}://{target['host']}{target['uri']}"
+    headers = build_default_headers(target['host'])
+    log_attack_status(f"Launch attack {target['host']} for {duration} second(s), concurrency={concurrency}...")
+
+    try:
+        summary = asyncio.run(
+            run_stress_test(
+                url=url,
+                duration=duration,
+                concurrency=concurrency,
+                method=method,
+                rate_limit=rate_limit,
                 headers=headers,
             )
         )
@@ -282,8 +364,8 @@ if __name__ == "__main__":
 
     target_url = get_user_input("URL TARGET:   ")
     while not validators.url(target_url):
-        print(f"{Fore.RED}    [ERROR] Invalid URL, try again.{' ' * 37}")
-        print(f"{Fore.CYAN}{'=' * 69}")
+        print(f"{Fore.RED}|    [ERROR] Invalid URL, try again.{' ' * 37}|")
+        print(f"{Fore.CYAN}|{'=' * 74}|")
         target_url = get_user_input("URL TARGET:")
 
     try:
@@ -311,4 +393,3 @@ if __name__ == "__main__":
             rate_limit = None
 
     launch_attack(target_url, attack_duration, concurrency=concurrency, method=method, rate_limit=rate_limit)
-
