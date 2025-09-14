@@ -219,15 +219,15 @@ def print_summary(url: str, duration: int, concurrency: int, method: str, rate_l
     rps = summary['total'] / duration if duration > 0 else 0
     # Gaya log penyelesaian seperti file asli
     stdout.write(f"\r{Fore.RED}|▒[÷]▒ {Fore.YELLOW}BLACK-ARMY {Fore.CYAN} Attack has been completed|\n")
-    print(f"{Fore.CYAN}|{'=' * 74}|")
+    print(f"{Fore.CYAN}|{'=' * 69}|")
     log_attack_status("Test selesai. Ringkasan:")
-    print(f"{Fore.CYAN}|{'=' * 74}|")
+    print(f"{Fore.CYAN}|{'=' * 69}|")
     print(f"{Fore.GREEN}| Target     : {url.ljust(58)}|")
     print(f"{Fore.GREEN}| Duration   : {str(duration)+'s':<58}|")
     print(f"{Fore.GREEN}| Concurrency: {str(concurrency):<58}|")
     print(f"{Fore.GREEN}| Method     : {method:<58}|")
     print(f"{Fore.GREEN}| Rate limit : {('None' if not rate_limit else str(rate_limit)+' req/s'):<58}|")
-    print(f"{Fore.CYAN}|{'-' * 74}|")
+    print(f"{Fore.CYAN}|{'-' * 69}|")
     print(f"{Fore.WHITE}| Requests   : {str(summary['total']):<58}|")
     print(f"{Fore.WHITE}| 2xx/3xx    : {str(summary['ok']):<58}|")
     print(f"{Fore.WHITE}| RPS (avg)  : {rps:<58.2f}|")
@@ -237,16 +237,16 @@ def print_summary(url: str, duration: int, concurrency: int, method: str, rate_l
         for code, cnt in summary['by_status'].most_common():
             print(f"{Fore.YELLOW}| HTTP {code:<4}: {str(cnt):<58}|")
     if summary['exceptions']:
-        print(f"{Fore.CYAN}|{'-' * 74}|")
+        print(f"{Fore.CYAN}|{'-' * 69}|")
         for name, cnt in summary['exceptions'].most_common():
             print(f"{Fore.RED}| {name:<10}: {str(cnt):<58}|")
-    print(f"{Fore.CYAN}|{'=' * 74}|")
+    print(f"{Fore.CYAN}|{'=' * 69}|")
 
 
 def confirm_ethical_use(target_host: str) -> bool:
     print(f"{Fore.YELLOW}| PERINGATAN: Gunakan hanya pada server milik sendiri dengan izin. |")
     print(f"{Fore.YELLOW}| Target: {target_host.ljust(61)}|")
-    print(f"{Fore.YELLOW}| Ketik 'YA' untuk melanjutkan: {' ' * 35}|")
+    print(f"{Fore.YELLOW}| Ketik 'Y' untuk melanjutkan: {' ' * 35}|")
     ans = input("    > ").strip().upper()
     return ans == 'YA'
 
