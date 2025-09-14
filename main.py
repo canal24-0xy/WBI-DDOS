@@ -233,7 +233,7 @@ def print_summary(url: str, duration: int, concurrency: int, method: str, rate_l
     print(f"{Fore.WHITE}| RPS (avg)  : {rps:<58.2f}|")
     print(f"{Fore.WHITE}| Latency ms : avg={avg:.2f} p95={p95:.2f} p99={p99:.2f}{' ' * 20}|")
     if summary['by_status']:
-        print(f"{Fore.CYAN}|{'-' * 74}|")
+        print(f"{Fore.CYAN}|{'-' * 69}|")
         for code, cnt in summary['by_status'].most_common():
             print(f"{Fore.YELLOW}| HTTP {code:<4}: {str(cnt):<58}|")
     if summary['exceptions']:
@@ -248,7 +248,7 @@ def confirm_ethical_use(target_host: str) -> bool:
     print(f"{Fore.YELLOW}| Target: {target_host.ljust(61)}|")
     print(f"{Fore.YELLOW}| Ketik 'Y' untuk melanjutkan: {' ' * 35}|")
     ans = input("    > ").strip().upper()
-    return ans == 'YA'
+    return ans == 'Y'
 
 
 def launch_attack(target_url, duration, concurrency=10, method='GET', rate_limit=None):
