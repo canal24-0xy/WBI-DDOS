@@ -85,7 +85,7 @@ def countdown(t):
             print(f"\r{Fore.WHITE}:: I N A R A {Fore.YELLOW}==⟩ WAR ==⟩ {url} 💥")
         else:
             stdout.flush()
-            stdout.write(f"\r{Fore.RED}|▒[÷]▒  {Fore.YELLOW}B A S E  {Fore.CYAN} Attack has been completed|\n")
+            stdout.write(f"\r{Fore.RED}▒[÷]▒  {Fore.YELLOW}W B I  {Fore.CYAN} Attack has been completed|\n")
             print(f"{Fore.YELLOW}{'═' * 69}")
             return
 
@@ -218,7 +218,7 @@ def print_summary(url: str, duration: int, concurrency: int, method: str, rate_l
     p99 = sorted(latencies)[int(0.99 * len(latencies)) - 1] if latencies else 0.0
     rps = summary['total'] / duration if duration > 0 else 0
     # Gaya log penyelesaian seperti file asli
-    stdout.write(f"\r{Fore.RED}|▒[÷]▒ {Fore.YELLOW}W B I {Fore.CYAN} Attack has been completed|\n")
+    stdout.write(f"\r{Fore.RED}▒[÷]▒ {Fore.YELLOW}W B I {Fore.CYAN} Attack has been completed|\n")
     print(f"{Fore.CYAN}|{'=' * 74}|")
     log_attack_status("Test selesai. Ringkasan:")
     print(f"{Fore.CYAN}|{'=' * 74}|")
@@ -233,14 +233,14 @@ def print_summary(url: str, duration: int, concurrency: int, method: str, rate_l
     print(f"{Fore.WHITE}| RPS (avg)  : {rps:<58.2f}|")
     print(f"{Fore.WHITE}| Latency ms : avg={avg:.2f} p95={p95:.2f} p99={p99:.2f}{' ' * 20}|")
     if summary['by_status']:
-        print(f"{Fore.CYAN}|{'-' * 74}|")
+        print(f"{Fore.CYAN}{'-' * 69}")
         for code, cnt in summary['by_status'].most_common():
             print(f"{Fore.YELLOW}| HTTP {code:<4}: {str(cnt):<58}|")
     if summary['exceptions']:
-        print(f"{Fore.CYAN}|{'-' * 74}|")
+        print(f"{Fore.CYAN}{'-' * 69}")
         for name, cnt in summary['exceptions'].most_common():
             print(f"{Fore.RED}| {name:<10}: {str(cnt):<58}|")
-    print(f"{Fore.CYAN}|{'=' * 58}|")
+    print(f"{Fore.CYAN}{'=' * 58}|")
 
 
 def confirm_ethical_use(target_host: str) -> bool:
