@@ -219,19 +219,19 @@ def print_summary(url: str, duration: int, concurrency: int, method: str, rate_l
     rps = summary['total'] / duration if duration > 0 else 0
     # Gaya log penyelesaian seperti file asli
     stdout.write(f"\r{Fore.RED}▒[÷]▒ {Fore.YELLOW}W B I {Fore.CYAN} Attack has been completed|\n")
-    print(f"{Fore.CYAN}|{'=' * 74}|")
+    print(f"{Fore.CYAN}{'=' * 69}")
     log_attack_status("Test selesai. Ringkasan:")
-    print(f"{Fore.CYAN}|{'=' * 74}|")
-    print(f"{Fore.GREEN}| Target     : {url.ljust(58)}|")
-    print(f"{Fore.GREEN}| Duration   : {str(duration)+'s':<58}|")
-    print(f"{Fore.GREEN}| Concurrency: {str(concurrency):<58}|")
-    print(f"{Fore.GREEN}| Method     : {method:<58}|")
-    print(f"{Fore.GREEN}| Rate limit : {('None' if not rate_limit else str(rate_limit)+' req/s'):<58}|")
-    print(f"{Fore.CYAN}|{'-' * 74}|")
-    print(f"{Fore.WHITE}| Requests   : {str(summary['total']):<58}|")
-    print(f"{Fore.WHITE}| 2xx/3xx    : {str(summary['ok']):<58}|")
-    print(f"{Fore.WHITE}| RPS (avg)  : {rps:<58.2f}|")
-    print(f"{Fore.WHITE}| Latency ms : avg={avg:.2f} p95={p95:.2f} p99={p99:.2f}{' ' * 20}|")
+    print(f"{Fore.CYAN}{'=' * 69}")
+    print(f"{Fore.GREEN} Target     : {url.ljust(58)}")
+    print(f"{Fore.GREEN} Duration   : {str(duration)+'s':<58}")
+    print(f"{Fore.GREEN} Concurrency: {str(concurrency):<58}")
+    print(f"{Fore.GREEN} Method     : {method:<58}")
+    print(f"{Fore.GREEN} Rate limit : {('None' if not rate_limit else str(rate_limit)+' req/s'):<58}")
+    print(f"{Fore.CYAN}{'-' * 74}")
+    print(f"{Fore.WHITE} Requests   : {str(summary['total']):<58}")
+    print(f"{Fore.WHITE} 2xx/3xx    : {str(summary['ok']):<58}")
+    print(f"{Fore.WHITE} RPS (avg)  : {rps:<58.2f}|")
+    print(f"{Fore.WHITE} Latency ms : avg={avg:.2f} p95={p95:.2f} p99={p99:.2f}{' ' * 20}")
     if summary['by_status']:
         print(f"{Fore.CYAN}{'-' * 69}")
         for code, cnt in summary['by_status'].most_common():
@@ -282,8 +282,8 @@ if __name__ == "__main__":
 
     target_url = get_user_input("URL TARGET:   ")
     while not validators.url(target_url):
-        print(f"{Fore.RED}|    [ERROR] Invalid URL, try again.{' ' * 37}|")
-        print(f"{Fore.CYAN}|{'=' * 58}|")
+        print(f"{Fore.RED}    [ERROR] Invalid URL, try again.{' ' * 37}")
+        print(f"{Fore.CYAN}{'=' * 69}")
         target_url = get_user_input("URL TARGET:")
 
     try:
