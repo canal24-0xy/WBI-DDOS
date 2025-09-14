@@ -187,7 +187,7 @@ async def run_stress_test(url: str, duration: int, concurrency: int,
             else:
                 await asyncio.sleep(0.5)
 
-          prog_task = asyncio.create_task(progress())
+        prog_task = asyncio.create_task(progress())
         try:
             results = await asyncio.gather(*tasks)
         finally:
